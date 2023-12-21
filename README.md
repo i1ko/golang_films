@@ -12,3 +12,7 @@ To run this app you need to execute:
 ```go
 go run main.go
 ```
+
+#### Materials to read:
+- [About templates](https://golangforall.com/en/post/templates.html)
+- 
