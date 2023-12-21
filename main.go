@@ -27,7 +27,17 @@ func main() {
 		tmpl.Execute(w, films)
 	}
 
+	handlerFormDataAppend := func(w http.ResponseWriter, r *http.Request) {
+		title := r.PostFormValue("title")
+		director := r.PostFormValue("director")
+		htmlStr := fmt.Sprintf("<li class='list-group-item bg-primary text-white'>%s - %s</li>", title, director)
+		tmpl, _ := template.New("t").Parse(htmlStr)
+
+		tmpl.Execute(w, nil)
+	}
+
 	http.HandleFunc("/", handlerRootStaticFilms)
+	http.HandleFunc("/add-film/", handlerFormDataAppend)
 
 	log.Fatal(http.ListenAndServe(":8000", nil))
 }
