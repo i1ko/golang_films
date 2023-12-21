@@ -14,5 +14,6 @@ go run main.go
 ```
 
 #### Materials to read:
+- [Installing Go](https://go.dev/doc/install)
 - [About templates](https://golangforall.com/en/post/templates.html)
-- 
+- [HTMX Swap Methods and more other](https://htmx.org/docs/#swapping)
